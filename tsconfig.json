@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "esnext",
+    "lib": ["es5", "es6"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    /* Modules */
+    "module": "commonjs",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@apps/*": ["apps/*"],
+      "@core/*": ["core/*"],
+      "@config/*": ["config/*"],
+      "@database/*": ["database/*"],
+      "@routes/*": ["routes/*"]
+    },
+    "typeRoots": ["./src/types"],
+    "types": ["jest"],
+
+    /* JavaScript Support */
+    "allowJs": true,
+
+    /* Emit */
+    "outDir": "./dist",
+    "downlevelIteration": true,
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "useDefineForClassFields": false,
+
+    /* Completeness */
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "test.js"],
+  "exclude": ["dist", "node_modules"]
+}

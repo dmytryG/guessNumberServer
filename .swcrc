@@ -1,0 +1,70 @@
+[
+  {
+    "$schema": "https://json.schemastore.org/swcrc",
+    "jsc": {
+      "parser": {
+        "syntax": "typescript",
+        "tsx": false,
+        "decorators": true,
+        "dynamicImport": false
+      },
+      "paths": {
+        "@apps/*": ["dist/apps/*"],
+        "@core/*": ["dist/core/*"],
+        "@config/*": ["dist/config/*"],
+        "@database/*": ["dist/database/*"],
+        "@routes/*": ["dist/routes/*"]
+      },
+      "target": "es2022",
+      "loose": true,
+      "keepClassNames": false,
+      "externalHelpers": false,
+      "transform": {
+        "legacyDecorator": true,
+        "decoratorMetadata": true
+      }
+    },
+    "module": {
+      "type": "commonjs",
+      "strict": false,
+      "strictMode": true,
+      "lazy": false,
+      "noInterop": false
+    },
+    "minify": true
+  },
+  {
+    "$schema": "https://json.schemastore.org/swcrc",
+    "jsc": {
+      "parser": {
+        "syntax": "ecmascript",
+        "jsx": false,
+        "decorators": true,
+        "dynamicImport": false
+      },
+      "paths": {
+        "@apps/*": ["dist/apps/*"],
+        "@core/*": ["dist/core/*"],
+        "@config/*": ["dist/config/*"],
+        "@database/*": ["dist/database/*"],
+        "@routes/*": ["dist/routes/*"]
+      },
+      "target": "es2022",
+      "loose": true,
+      "keepClassNames": false,
+      "externalHelpers": false,
+      "transform": {
+        "legacyDecorator": true,
+        "decoratorMetadata": true
+      }
+    },
+    "module": {
+      "type": "commonjs",
+      "strict": false,
+      "strictMode": true,
+      "lazy": false,
+      "noInterop": false
+    },
+    "minify": true
+  }
+]
