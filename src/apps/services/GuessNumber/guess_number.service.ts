@@ -2,6 +2,7 @@ import {optionsYup} from "@core/helpers/yup";
 import APIError from "@core/modules/errors/APIError";
 import {guessNumberSchema} from "@apps/schemas/guess_number";
 import {numberState} from "@core/constants/numberState";
+import console from "console";
 
 
 export default class GuessNumberService {
@@ -12,7 +13,9 @@ export default class GuessNumberService {
   }
 
   public static async start(uid: number): Promise<void> {
-    GuessNumberService.numbers.set(uid, GuessNumberService.getRandomNumber(0, 50))
+    const number = GuessNumberService.getRandomNumber(0, 50)
+    GuessNumberService.numbers.set(uid, number)
+    console.log(`Set number ${number} for user ${uid}`)
     return
   }
 
@@ -22,6 +25,7 @@ export default class GuessNumberService {
     if (!number) {
       throw new APIError(`Number wasn't created`, 404)
     }
+    console.log(`User ${uid} voted for ${value.number} (real number is ${number})`)
     if (value.number > number) {
       return numberState.LOWER
     } else if (value.number < number) {
